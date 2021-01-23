@@ -1,15 +1,13 @@
 let cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 let suits = ["Diamonds", "Spades", "Clubs", "Hearts"];
 let arr = [];
-/* dos variables donde asigno numeros de cartas y palo respectivamente */
-/* obtengo random card y random suit y las guardo en las dos variables respectivas */
 function getCardNumber(cards) {
     switch (cards) {
-         case 1: return "A"; break;
-         case 11: return "J"; break;
-         case 12: return "Q"; break;
-         case 13: return "K"; break;
-         default: return cards; break;
+        case 1: return "A"; break;
+        case 11: return "J"; break;
+        case 12: return "Q"; break;
+        case 13: return "K"; break;
+        default: return cards; break;
     }
 }
 function getSuitClass(suit) {
@@ -74,11 +72,11 @@ sort.addEventListener("click", (e) => {
                 div.classList.add("card");
                 const p = document.createElement("p");
                 div.classList.add(getSuitClass(arr[i].suit))
-              /*   p.innerHTML = arr[i].number; */
+                /*   p.innerHTML = arr[i].number; */
                 p.innerHTML = getCardNumber(arr[i].number);
                 div.appendChild(p);
                 table2.appendChild(div);
-                
+
             }
             document.body.appendChild(table2)
             index++;
